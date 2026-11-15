@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="dashboard.html" aria-current="page">Tableau de bord</a></li>
+                <li><a href="amis.html">Amis</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tableau de bord</h1>
+
+        <section>
+            <h2>Points gagnés cette semaine</h2>
+            <p><span id="points-semaine">7</span> points</p>
+            <p>Cumul des missions complétées</p>
+        </section>
+
+        <section>
+            <h2>Missions hebdomadaires</h2>
+            <p>Du 2 au 8 novembre 2026 · Semaine 45</p>
+            <p>
+                <label for="progression">
+                    <span id="missions-completees">3</span> sur <span id="nombre-missions">8</span> complétées
+                </label>
+                <progress id="progression" value="3" max="8"></progress>
+                <span id="pourcentage">38</span> %
+            </p>
+
+            <h3>Missions</h3>
+            <ul id="liste-missions" data-semaine="2026-45">
+                <li>
+                    <label><input id="mission-1" type="checkbox" data-points="2" checked> Mission 1</label>
+                    <span>2 points</span>
+                </li>
+                <li>
+                    <label><input id="mission-2" type="checkbox" data-points="2" checked> Mission 2</label>
+                    <span>2 points</span>
+                </li>
+                <li>
+                    <label><input id="mission-3" type="checkbox" data-points="3" checked> Mission 3</label>
+                    <span>3 points</span>
+                </li>
+                <li>
+                    <label><input id="mission-4" type="checkbox" data-points="4"> Mission 4</label>
+                    <span>4 points</span>
+                </li>
+                <li>
+                    <label><input id="mission-5" type="checkbox" data-points="4"> Mission 5</label>
+                    <span>4 points</span>
+                </li>
+                <li>
+                    <label><input id="mission-6" type="checkbox" data-points="5"> Mission 6</label>
+                    <span>5 points</span>
+                </li>
+                <li>
+                    <label><input id="mission-7" type="checkbox" data-points="5"> Mission 7</label>
+                    <span>5 points</span>
+                </li>
+                <li>
+                    <label><input id="mission-8" type="checkbox" data-points="5"> Mission 8</label>
+                    <span>5 points</span>
+                </li>
+            </ul>
+            <p><span id="missions-restantes">5</span> missions restantes</p>
+        </section>
+    </main>
+    <script src="recompenses.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
