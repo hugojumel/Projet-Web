@@ -1,108 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device_width, initial-scale=1"/>
-        <title>The Social Game - Dashboard</title>
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
-        <div>
-            <aside class="nav_bar">
-                <a href="accueil.html">
-                    <img src="../ressources/logo_header.png" alt="The Social Game">
-                </a>
-                <nav class="nav_buttons">
-                    <a class="nav_button_active" href="dashboard.html">
-                        <img src="../ressources/world.png" alt="world"> Tableau de bord
-                    </a>    
-                    <a class="nav_button" href="evenements.html">
-                        <img src="../ressources/calendar-alt.png" alt="calendar-alt">
-                        Évenements
-                    </a>    
-                    <a class="nav_button" href="amis.html">
-                        <img src="../ressources/users.png" alt="users">
-                        Amis
-                    </a>    
-                    <a class="nav_button" href="profil.html">
-                        <img src="../ressources/user-circle.png" alt="user-circle">
-                        Profil
-                    </a>
-                </nav>
-            </aside>
-            <div>
-                <h1>Tableau de bord</h1>
-                <section class="points_panel">
-                    <box class="widget_box">
-                        <img src="../ressources/Trophy.png" alt="trophy">
-                    </box>
-                    <h2 class="panel_title">Points gagnés cette semaine</h2>
-                    <p class="points"><b>7 Points</b></p>
-                    <p class="subscript">Cumul des missions complétées</p>
-                </section>
-                <section class="mission_panel">
-                    <box class="widget_box">
-                        <img src="../ressources/Task list.png" alt="task list">
-                    </box>
-                    <h2 class="panel_title">Missions hebdomadaires</h2>
-                    <div class="week_overview">
-                        <p><b>2-8 Novembre, 2026</b></p>
-                        <p class="subscript">Cette semaine - Semaine 45</p>
-                    </div>
-                    <div class="week_progress">
-                        <p class="subscript">3 sur 8 complétées</p>
-                        <p><b>38%</b></p>
-                    </div>
-                    <p class="subscript">Missions</p>
-                    <div class="mission_list">
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 1</p>
-                            <p>2 points</p>
-                        </label>
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 2</p>
-                            <p>2 points</p>
-                        </label>
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 3</p>
-                            <p>3 points</p>
-                        </label>
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 4</p>
-                            <p>4 points</p>
-                        </label>
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 5</p>
-                            <p>4 points</p>
-                        </label>
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 6</p>
-                            <p>5 points</p>
-                        </label>
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 7</p>
-                            <p>5 points</p>
-                        </label>
-                        <label class="mission">
-                            <input type="checkbox">
-                            <p>Mission 8</p>
-                            <p>5 points</p>
-                        </label>                       
-                    </div>
-                    <p>5 missions restantes</p>
-                </section>
-            </div>
-        </div>
-        <footer class="site_footer">
-            <p>The Social Game</p>
-            <a href="a_propos">A propos</p>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="dashboard.html" aria-current="page">Tableau de bord</a></li>
+                <li><a href="amis.html">Amis</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tableau de bord</h1>
+
+        <section>
+            <h2>Points gagnés cette semaine</h2>
+            <p><span id="points-semaine">7</span> points</p>
+            <p>Cumul des missions complétées</p>
+        </section>
+
+        <section>
+            <h2>Missions hebdomadaires</h2>
+            <p>Du 2 au 8 novembre 2026 · Semaine 45</p>
+            <p>
+                <label for="progression">
+                    <span id="missions-completees">3</span> sur 8 complétées
+                </label>
+                <progress id="progression" value="3" max="8"></progress>
+                <span id="pourcentage">38</span> %
+            </p>
+
+            <h3>Missions</h3>
+            <ul id="liste-missions">
+                <li>
+                    <label><input type="checkbox" data-points="2" checked> Mission 1</label>
+                    <span>2 points</span>
+                </li>
+                <li>
+                    <label><input type="checkbox" data-points="2" checked> Mission 2</label>
+                    <span>2 points</span>
+                </li>
+                <li>
+                    <label><input type="checkbox" data-points="3" checked> Mission 3</label>
+                    <span>3 points</span>
+                </li>
+                <li>
+                    <label><input type="checkbox" data-points="4"> Mission 4</label>
+                    <span>4 points</span>
+                </li>
+                <li>
+                    <label><input type="checkbox" data-points="4"> Mission 5</label>
+                    <span>4 points</span>
+                </li>
+                <li>
+                    <label><input type="checkbox" data-points="5"> Mission 6</label>
+                    <span>5 points</span>
+                </li>
+                <li>
+                    <label><input type="checkbox" data-points="5"> Mission 7</label>
+                    <span>5 points</span>
+                </li>
+                <li>
+                    <label><input type="checkbox" data-points="5"> Mission 8</label>
+                    <span>5 points</span>
+                </li>
+            </ul>
+            <p><span id="missions-restantes">5</span> missions restantes</p>
+        </section>
+    </main>
+</body>
 </html>
