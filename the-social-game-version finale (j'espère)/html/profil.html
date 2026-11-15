@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Game - Profil</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="has_nav_bar">
+        <aside class="nav_bar">
+            <a href="accueil.html"><img src="../ressources/logo_header.png" alt="The Social Game, accueil"></a>
+            <nav class="nav_buttons" aria-label="Navigation principale">
+                <a class="nav_button" href="dashboard.html"><img src="../ressources/world.png" alt=""> Tableau de bord</a>
+                <a class="nav_button" href="evenements.html"><img src="../ressources/calendar-alt.png" alt=""> Événements</a>
+                <a class="nav_button" href="amis.html"><img src="../ressources/users.png" alt=""> Amis</a>
+                <a class="nav_button_active" href="profil.html" aria-current="page"><img src="../ressources/user-circle.png" alt=""> Profil</a>
+            </nav>
+        </aside>
+        <main class="content">
+            <div class="profile">
+                <div class="info_profile">
+                    <h1>Profil</h1>
+                </div>
+            </div>
+
+            <section class="progress">
+                <div class="progress_heading"><h2>Niveau <span id="niveau">1</span></h2></div>
+                <label for="progression-niveau">
+                    <span id="xp-niveau">0</span> / <span id="xp-palier">100</span> XP dans ce niveau
+                </label>
+                <progress id="progression-niveau" value="0" max="100" style="width: 100%; accent-color: var(--yellow)"></progress>
+                <p>Il te reste <span id="xp-restants">100</span> XP pour atteindre le niveau suivant.</p>
+            </section>
+
+            <section>
+                <h2>Statistiques</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat_content">
+                            <p>Total XP</p>
+                            <p><span id="total-xp">0</span> XP</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat_content">
+                            <p>Total des points de mission</p>
+                            <p id="total-points">0</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat_content">
+                            <p>Points de mission ce mois-ci</p>
+                            <p><span id="points-mois">0</span> points · <span id="xp-mois">0</span> XP</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat_content">
+                            <p>Missions réalisées ce mois-ci</p>
+                            <p id="missions-mois">0</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat_content">
+                            <p>Total des missions réalisées</p>
+                            <p id="total-missions">0</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent_missions">
+                <h2>Missions récentes</h2>
+                <p id="aucune-mission">Aucune mission réalisée pour le moment.</p>
+                <ul id="missions-recentes"></ul>
+            </section>
+        </main>
+    </div>
+    <footer class="site_footer">
+        <p>The Social Game</p>
+        <a href="accueil.html#presentation">À propos</a>
+    </footer>
+    <script src="recompenses.js"></script>
+    <script src="profil.js"></script>
+</body>
+</html>
