@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <div>
+        <div class="has_nav_bar">
             <aside class="nav_bar">
                 <a href="accueil.html">
                     <img src="../ressources/logo_header.png" alt="The Social Game">
@@ -30,57 +30,59 @@
                     </a>
                 </nav>
             </aside>
-            <div class="identity">
-                <div>
-                    <h1>Alex Mercier</h1>
-                    <p>Niveau 12</p>
-                </div>
-                <button class="edit_button" type="button">
+            <main class="content">
+                <div class="profile">
+                    <div class="info_profile">
+                        <h1>Alex Mercier</h1>
+                        <p>Niveau 12</p>
+                    </div>
+                    <button class="edit_button" type="button">
                     <img src="../ressources/pencil.png" alt="pencil">
                     Modifier
-                </button>
-            </div>
-            <section class="progress">
-                <div class="progress_heading">
-                    <h4>Level 12 Progress</h4>
-                    <img src="../ressources/check.png" alt="check">
+                    </button>
                 </div>
-                <div class="progress_track">
-                    <p>250 XP du prochain niveau</p>
-                </div>
-            </section>
-            <section class="stats">
-                <article class="stat">
-                    <img src="../ressources/trophy-sharp.png">
-                    <div>
-                        <p>Total XP</p>
-                        <h4>1,250</h4>
+                <section class="progress">
+                    <div class="progress_heading">
+                        <h4>Level 12 Progress</h4>
+                        <img src="../ressources/check.png" alt="check">
                     </div>
-                </article>
-                <article class="stat">
-                    <img src="../ressources/calendar2-check-fill.png">
-                    <div>
-                        <p>Missions réalisées</p>
-                        <h4>12</h4>
-                        <p>pendant ce mois</p>
+                    <div class="progress_track">
+                        <p>250 XP du prochain niveau</p>
                     </div>
-                </article>
-                <article class="stat">
-                    <img src="../ressources/list-check.png">
-                    <div>
-                        <p>Total de missions</p>
-                        <h4>25</h4>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <h2>Mission Récentes</h2>
-                <ul style="list-style-type: none;">
-                    <li><img src="../ressources/check_green.png" alt="check_green">Mission 3</li>
-                    <li><img src="../ressources/check_green.png" alt="check_green">Mission 2</li>
-                    <li><img src="../ressources/check_green.png" alt="check_green">Mission 1</li>
-                </ul>
-            </section>
+                </section>
+                <section class="stats">
+                    <article class="stat">
+                        <img src="../ressources/trophy-sharp.png">
+                        <div class="stat_content">
+                            <p>Total XP</p>
+                            <h4>1,250</h4>
+                        </div>
+                    </article>
+                    <article class="stat">
+                        <img src="../ressources/calendar2-check-fill.png">
+                        <div class="stat_content">
+                            <p>Missions réalisées</p>
+                            <h4>12</h4>
+                            <p>pendant ce mois</p>
+                        </div>
+                    </article>
+                    <article class="stat">
+                        <img src="../ressources/list-check.png">
+                        <div class="stat_content">
+                            <p>Total de missions</p>
+                            <h4>25</h4>
+                        </div>
+                    </article>
+                </section>
+                <section class="recent_missions">
+                    <h2>Mission Récentes</h2>
+                    <ul style="list-style-type: none;">
+                        <li><img src="../ressources/check_green.png" alt="check_green">Mission 3</li>
+                        <li><img src="../ressources/check_green.png" alt="check_green">Mission 2</li>
+                        <li><img src="../ressources/check_green.png" alt="check_green">Mission 1</li>
+                    </ul>
+                </section>
+            </main>
         </div>
         <footer class="site_footer">
             <p>The Social Game</p>

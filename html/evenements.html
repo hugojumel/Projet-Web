@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <div>
+        <div class="has_nav_bar">
             <aside class="nav_bar">
                 <a href="accueil.html">
                     <img src="../ressources/logo_header.png" alt="The Social Game">
@@ -30,61 +30,63 @@
                     </a>
                 </nav>
             </aside>
-            <div>
-                <h1>Découvrez les événements à venir</h1>
-                <h2>Événements</h2>
-                <p>Retrouvez ici les rencontres organisées par The Social Game et par la communauté. Rejoignez une soirée, un atelier ou un meetup pour rencontrer d'autres membres.</p>
-            </div>
-            <div class="event_grid">
-                <article class="event_card">
-                    <img src="../ressources/event_launch.png" alt="Image Événements" class="event_image">
-                    <div>
-                        <p class="organisateur">Organisé par The Social Game</p>
-                        <h3 class="event_title">Soirée de lancement</h3>
-                        <p>Venez découvrir les nouvelles fonctionnalités de la plateforme et rencontrer l'équipe. Une soirée conviviale avec des jeux, des boissons et des échanges.</p>
-                    </div>
-                    <div class="actions">
-                        <button class="signup" type="button">S'inscrire</button>
-                        <button class="details" type="button">Voir détails</button>
-                    </div>
-                </article>
-                <article class="event_card">
-                    <img src="../ressources/event_photogragh.png" alt="Image Événements" class="event_image">
-                    <div>
-                        <p class="organisateur">Organisé par @Lumière</p>
-                        <h3 class="event_title">Atelier de photographie</h3>
-                        <p>Apprenez les bases de la photographie de rue avec un photographe professionnel. Partagez vos connaissances et découvrez de nouveaux angles de vue.</p>
-                    </div>
-                    <div class="actions">
-                        <button class="signup" type="button">S'inscrire</button>
-                        <button class="details" type="button">Voir détails</button>
-                    </div>
-                </article>
-                <article class="event_card">
-                    <img src="../ressources/event_meetup.png" alt="Image Événements" class="event_image">
-                    <div>
-                        <p class="organisateur">Organisé par The Social Game</p>
-                        <h3 class="event_title">Meetup des développeurs</h3>
-                        <p>Rencontrez d'autres développeurs et discutez des dernières tendances en tech. Un espace pour partager vos projets et trouver de nouveaux collaborateurs.</p>
-                    </div>
-                    <div class="actions">
-                        <button class="signup" type="button">S'inscrire</button>
-                        <button class="details" type="button">Voir détails</button>
-                    </div>
-                </article>
-                <article class="event_card">
-                    <img src="../ressources/event_boardgame.png" alt="Image Événements" class="event_image">
-                    <div>
-                        <p class="organisateur">Organisé par @BoardGameClub</p>
-                        <h3 class="event_title">Soirée jeux de société</h3>
-                        <p>Une soirée détente autour des jeux de société les plus populaires. Venez avec vos amis ou rejoignez une table pour faire de nouvelles rencontres.</p>
-                    </div>
-                    <div class="actions">
-                        <button class="signup" type="button">S'inscrire</button>
-                        <button class="details" type="button">Voir détails</button>
-                    </div>
-                </article>
-            </div>
+            <main class="content">
+                <div class="head">
+                    <h1>Découvrez les événements à venir</h1>
+                    <h2>Événements</h2>
+                    <p>Retrouvez ici les rencontres organisées par The Social Game et par la communauté. Rejoignez une soirée, un atelier ou un meetup pour rencontrer d'autres membres.</p>
+                </div>
+                <div class="event_grid">
+                    <article class="event_card">
+                        <img src="../ressources/event_launch.png" alt="Image Événements" class="event_image">
+                        <div class="event_description">
+                            <p class="organisateur">Organisé par The Social Game</p>
+                            <h3 class="event_title">Soirée de lancement</h3>
+                            <p>Venez découvrir les nouvelles fonctionnalités de la plateforme et rencontrer l'équipe. Une soirée conviviale avec des jeux, des boissons et des échanges.</p>
+                        </div>
+                        <div class="actions">
+                            <button class="signup" type="button">S'inscrire</button>
+                            <button class="details" type="button">Voir détails</button>
+                        </div>
+                    </article>
+                    <article class="event_card">
+                        <img src="../ressources/event_photogragh.png" alt="Image Événements" class="event_image">
+                        <div class="event_description">
+                            <p class="organisateur">Organisé par @Lumière</p>
+                            <h3 class="event_title">Atelier de photographie</h3>
+                            <p>Apprenez les bases de la photographie de rue avec un photographe professionnel. Partagez vos connaissances et découvrez de nouveaux angles de vue.</p>
+                        </div>
+                        <div class="actions">
+                            <button class="signup" type="button">S'inscrire</button>
+                            <button class="details" type="button">Voir détails</button>
+                        </div>
+                    </article>
+                    <article class="event_card">
+                        <img src="../ressources/event_meetup.png" alt="Image Événements" class="event_image">
+                        <div class="event_description">
+                            <p class="organisateur">Organisé par The Social Game</p>
+                            <h3 class="event_title">Meetup des développeurs</h3>
+                            <p>Rencontrez d'autres développeurs et discutez des dernières tendances en tech. Un espace pour partager vos projets et trouver de nouveaux collaborateurs.</p>
+                        </div>
+                        <div class="actions">
+                            <button class="signup" type="button">S'inscrire</button>
+                            <button class="details" type="button">Voir détails</button>
+                        </div>
+                    </article>
+                    <article class="event_card">
+                        <img src="../ressources/event_boardgame.png" alt="Image Événements" class="event_image">
+                        <div class="event_description">
+                            <p class="organisateur">Organisé par @BoardGameClub</p>
+                            <h3 class="event_title">Soirée jeux de société</h3>
+                            <p>Une soirée détente autour des jeux de société les plus populaires. Venez avec vos amis ou rejoignez une table pour faire de nouvelles rencontres.</p>
+                        </div>
+                        <div class="actions">
+                            <button class="signup" type="button">S'inscrire</button>
+                            <button class="details" type="button">Voir détails</button>
+                        </div>
+                    </article>
+                </div>
+            </main>
         </div>
         <footer class="site_footer">
             <p>The Social Game</p>
