@@ -625,7 +625,7 @@ header img {
     color: var(--muted);
 }
 
-.stat_content h4 {
+.stat_content h3 {
     margin: 0;
     font-size: 22px;
 }
