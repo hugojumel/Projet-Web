@@ -57,8 +57,6 @@ h3 {
     font-size:18px
 }
 
-/* Sidebar + shared interior page shell */
-
 .has_nav_bar {
     display: flex;
     width: 100%;
@@ -282,34 +280,45 @@ header img {
 }
 
 .week_overview {
-    background:var(--soft);
-    border-radius:8px;
-    padding:14px 16px;
-    margin-top:12px
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: var(--soft);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 12px;
 }
 
-.week_overview p {
-    margin:0
+.current_week {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.current_week p {
+    margin: 0;
 }
 
 .week_progress {
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    gap:20px;
-    background:var(--soft);
-    padding:0 16px 12px;
-    margin-top:-2px
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    white-space: nowrap;
 }
 
-.week_progress p {
-    margin:0
-}
-
-.week_progress b {
-    display:block;
-    border-bottom:4px solid var(--yellow);
-    padding-bottom:5px
+.week_progress progress {
+    width: 150px;
+    height: 12px;
+    accent-color: var(--yellow);
 }
 
 .mission_panel>.subscript {
@@ -317,11 +326,16 @@ header img {
 }
 
 .mission_list {
-    display:flex;
-    flex-direction:column
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Each mission is now a label.mission_box in the updated HTML. */
+.mission_list li {
+    list-style: none;
+}
+
+
 .mission_box {
     display: flex;
     align-items: center;
@@ -361,7 +375,7 @@ header img {
     margin:16px 0 0
 }
 
-/* Événements: first intro block then grid */
+/* Événements */
 
 .content:has(.event_grid) > .head {
     display: block;
@@ -435,6 +449,25 @@ header img {
 
 .details:hover {
     background:var(--cream)
+}
+
+.points-evenement {
+    display: inline-block;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 8px 0;
+}
+
+.signup:disabled {
+    opacity: 1;
+}
+
+.event_card .signup:has(+ .details) {
+    transition: background-color 0.2s ease;
 }
 
 /* Amis */
@@ -742,7 +775,8 @@ header img {
     .points_panel, .mission_panel {
         padding: 18px;
     }
-        .about_section {
+
+    .about_section {
         padding: 18px;
     }
 
