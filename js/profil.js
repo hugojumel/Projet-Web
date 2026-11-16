@@ -29,9 +29,15 @@ function mettreAJourProfil() {
             nombreCeMois += 1;
             pointsCeMois += points;
         }
-
         const ligne = document.createElement("li");
-        ligne.textContent = mission.nom;
+        const check = document.createElement("img");
+        check.src = "../ressources/check_green.png";
+        check.alt = "Mission accomplie";
+        check.className = "mission_check";
+        const nomMission = document.createElement("span");
+        nomMission.textContent = mission.nom;
+        ligne.appendChild(check);
+        ligne.appendChild(nomMission);
         missionsRecentes.appendChild(ligne);
     }
 

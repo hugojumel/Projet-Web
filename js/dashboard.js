@@ -49,34 +49,67 @@ function mettreAJourDashboard() {
     pourcentage.textContent = Math.round(nombreCompletees / casesMissions.length * 100);
 }
 
-function afficherMissionsEvenements() {
-    const inscriptions = JSON.parse(localStorage.getItem(cleInscriptions) || "[]");
 
+function afficherMissionsEvenements() {
+    const inscriptions = JSON.parse(
+        localStorage.getItem(cleInscriptions) || "[]"
+    );
+
+    const idsInscrits = new Set(
+        inscriptions.map(inscription => inscription.id)
+    );
+
+    // Remove events that are no longer registered
+    for (let i = casesMissions.length - 1; i >= 0; i--) {
+        const caseMission = casesMissions[i];
+
+        if (
+            caseMission.id.startsWith("evenement-") &&
+            !idsInscrits.has(caseMission.id)
+        ) {
+            caseMission.closest("li").remove();
+            casesMissions.splice(i, 1);
+        }
+    }
+
+    const idsExistants = new Set(
+        casesMissions.map(caseMission => caseMission.id)
+    );
+
+    // Add newly registered events
     for (const inscription of inscriptions) {
-        if (document.getElementById(inscription.id)) {
+        if (idsExistants.has(inscription.id)) {
             continue;
         }
+
+        const points = pointsEvenements[inscription.id] ?? 0;
 
         const ligne = document.createElement("li");
         const label = document.createElement("label");
         const caseMission = document.createElement("input");
         const titre = document.createElement("span");
         const recompense = document.createElement("span");
-        const points = pointsEvenements[inscription.id];
+
         caseMission.type = "checkbox";
         caseMission.id = inscription.id;
         caseMission.dataset.points = points;
-        caseMission.addEventListener("change", enregistrerChangement);
+
         label.className = "mission_box";
+
         titre.className = "mission";
         titre.textContent = inscription.titre;
+
         recompense.className = "mission_points";
         recompense.textContent = points + " points";
 
         label.append(caseMission, titre, recompense);
         ligne.appendChild(label);
         listeMissions.appendChild(ligne);
+
+        caseMission.addEventListener("change", enregistrerChangement);
+
         casesMissions.push(caseMission);
+        idsExistants.add(inscription.id);
     }
 }
 
@@ -106,7 +139,7 @@ function enregistrerChangement(event) {
     }
 
     localStorage.setItem(cleHistorique, JSON.stringify(historique));
-    restaurerCasesMissions();
+    mettreAJourDashboard();
 }
 
 // Au premier lancement, enregistrer les missions cochées dans la maquette.
