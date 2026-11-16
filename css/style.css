@@ -662,6 +662,13 @@ header img {
     height: 16px;
 }
 
+.recent_missions .mission_check {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 /*A propos*/
 
 .about_page > h1 {
