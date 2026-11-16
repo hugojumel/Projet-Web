@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device_width, initial-scale=1"/>
         <title>The Social Game - Profil</title>
         <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/recompenses.js" defer></script>
+        <script src="../js/profil.js" defer></script>
     </head>
     <body>
         <div class="has_nav_bar">
@@ -34,7 +36,7 @@
                 <div class="profile">
                     <div class="info_profile">
                         <h1>Alex Mercier</h1>
-                        <p>Niveau 12</p>
+                        <p>Niveau <span id="niveau">1</span></p>
                     </div>
                     <button class="edit_button" type="button">
                     <img src="../ressources/pencil.png" alt="pencil">
@@ -43,26 +45,27 @@
                 </div>
                 <section class="progress">
                     <div class="progress_heading">
-                        <h4>Level 12 Progress</h4>
+                        <h4>Progression vers le prochain niveau</h4>
                         <img src="../ressources/check.png" alt="check">
                     </div>
-                    <div class="progress_track">
-                        <p>250 XP du prochain niveau</p>
-                    </div>
+                        <progress id="progression-niveau" value="0" max="100" style="width:100%; accent-color:var(--yellow)"></progress>
+                        <p><span id="xp-niveau">0</span> / <span id="xp-palier">100</span> XP dans ce niveau — <span id="xp-restants">100</span> XP avant le prochain niveau</p>
                 </section>
                 <section class="stats">
                     <article class="stat">
                         <img src="../ressources/trophy-sharp.png">
                         <div class="stat_content">
                             <p>Total XP</p>
-                            <h4>1,250</h4>
+                            <h4 id="total-xp">0</h4>
+                            <p><span id="total-points">0</span> points au total</p>
                         </div>
                     </article>
                     <article class="stat">
                         <img src="../ressources/calendar2-check-fill.png">
                         <div class="stat_content">
                             <p>Missions réalisées</p>
-                            <h4>12</h4>
+                            <h4 id="missions-mois">0</h4>
+                            <p><span id="points-mois">0</span> points · <span id="xp-mois">0</span> XP ce mois</p>
                             <p>pendant ce mois</p>
                         </div>
                     </article>
@@ -70,17 +73,14 @@
                         <img src="../ressources/list-check.png">
                         <div class="stat_content">
                             <p>Total de missions</p>
-                            <h4>25</h4>
+                            <h4 id="total-missions">0</h4>
                         </div>
                     </article>
                 </section>
                 <section class="recent_missions">
                     <h2>Mission Récentes</h2>
-                    <ul style="list-style-type: none;">
-                        <li><img src="../ressources/check_green.png" alt="check_green">Mission 3</li>
-                        <li><img src="../ressources/check_green.png" alt="check_green">Mission 2</li>
-                        <li><img src="../ressources/check_green.png" alt="check_green">Mission 1</li>
-                    </ul>
+                    <ul id="missions-recentes"style="list-style-type: none;"></ul>
+                    <p id="aucune-mission">Aucune mission réalisée pour le moment.</p>
                 </section>
             </main>
         </div>

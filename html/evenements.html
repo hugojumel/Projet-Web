@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device_width, initial-scale=1"/>
         <title>The Social Game - Événements</title>
         <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/recompenses.js" defer></script>
+        <script src="../js/evenements.js" defer></script>
     </head>
     <body>
         <div class="has_nav_bar">
@@ -18,7 +20,7 @@
                     </a>    
                     <a class="nav_button_active" href="evenements.html">
                         <img src="../ressources/calendar-alt.png" alt="calendar-alt">
-                        Évenements
+                        Événements
                     </a>    
                     <a class="nav_button" href="amis.html">
                         <img src="../ressources/users.png" alt="users">
@@ -37,10 +39,11 @@
                     <p>Retrouvez ici les rencontres organisées par The Social Game et par la communauté. Rejoignez une soirée, un atelier ou un meetup pour rencontrer d'autres membres.</p>
                 </div>
                 <div class="event_grid">
-                    <article class="event_card">
+                    <article class="event_card" id="evenement-lancement">
                         <img src="../ressources/event_launch.png" alt="Image Événements" class="event_image">
                         <div class="event_description">
                             <p class="organisateur">Organisé par The Social Game</p>
+                            <p class="points-evenement"></p>
                             <h3 class="event_title">Soirée de lancement</h3>
                             <p>Venez découvrir les nouvelles fonctionnalités de la plateforme et rencontrer l'équipe. Une soirée conviviale avec des jeux, des boissons et des échanges.</p>
                         </div>
@@ -49,10 +52,11 @@
                             <button class="details" type="button">Voir détails</button>
                         </div>
                     </article>
-                    <article class="event_card">
+                    <article class="event_card" id="evenement-photographie">
                         <img src="../ressources/event_photogragh.png" alt="Image Événements" class="event_image">
                         <div class="event_description">
                             <p class="organisateur">Organisé par @Lumière</p>
+                            <p class="points-evenement"></p>
                             <h3 class="event_title">Atelier de photographie</h3>
                             <p>Apprenez les bases de la photographie de rue avec un photographe professionnel. Partagez vos connaissances et découvrez de nouveaux angles de vue.</p>
                         </div>
@@ -61,10 +65,11 @@
                             <button class="details" type="button">Voir détails</button>
                         </div>
                     </article>
-                    <article class="event_card">
+                    <article class="event_card" id="evenement-meetup">
                         <img src="../ressources/event_meetup.png" alt="Image Événements" class="event_image">
                         <div class="event_description">
                             <p class="organisateur">Organisé par The Social Game</p>
+                            <p class="points-evenement"></p>
                             <h3 class="event_title">Meetup des développeurs</h3>
                             <p>Rencontrez d'autres développeurs et discutez des dernières tendances en tech. Un espace pour partager vos projets et trouver de nouveaux collaborateurs.</p>
                         </div>
@@ -73,10 +78,11 @@
                             <button class="details" type="button">Voir détails</button>
                         </div>
                     </article>
-                    <article class="event_card">
+                    <article class="event_card" id="evenement-jeux">
                         <img src="../ressources/event_boardgame.png" alt="Image Événements" class="event_image">
                         <div class="event_description">
                             <p class="organisateur">Organisé par @BoardGameClub</p>
+                            <p class="points-evenement"></p>
                             <h3 class="event_title">Soirée jeux de société</h3>
                             <p>Une soirée détente autour des jeux de société les plus populaires. Venez avec vos amis ou rejoignez une table pour faire de nouvelles rencontres.</p>
                         </div>
